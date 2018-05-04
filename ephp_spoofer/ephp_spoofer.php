@@ -1,6 +1,5 @@
-<!--  Email Spoofer v0.0.1 | MIT License | github.com/ShubhamBadal/email-spoofer  -->
-
-<!doctype html>
+<!--  [ EPHP-Spoofer ](https://github.com/PulkitSingh256/EPHP-Spoofer)  -->
+<!DOCTYPE html>
 <html>
 <body>
 
