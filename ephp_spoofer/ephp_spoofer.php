@@ -2,7 +2,11 @@
 <!DOCTYPE html>
 <html>
 <body>
-
+	<style>
+	      body {
+	             background-image: url("bg.png");
+	      } 
+	</style>
 	<?php
 
 	/* fetching user input */
@@ -35,8 +39,9 @@
 
 
 	// output
-	if (mail($to, $subject, $message, $headers)) echo $headers.'<p>EPHP Successfully Spoofed your Message</p>';
-	else echo '<p>Error Sending The Email </p><a href="javascript:history.back()">Retry</a>';
+	if (mail($to, $subject, $message, $headers)) echo '<p style="text-align: center;">EPHP_SPOOFER Successfully Spoofed your Message </p><p style="text-align: center;"><a href="javascript:history.back()"> Send One More</a></p>';
+	else
+	    echo '<p style="text-align: center;">Error Sending The Email</p><p style="text-align: center;"><a href="javascript:history.back()"> Retry</a></p>';
 
 	?>
 
