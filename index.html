@@ -2,36 +2,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta name="viewport" content="width=device-width">
+	<meta content="width=device-width" name="viewport">
 	<title>EPHP_SPOOFER BY PULKIT SINGHANIA</title>
 </head>
 <body>
 	<style>
-	body {
-	       background-image: url("ephp_spoofer/bg.jpg");
-	} 
+	   body {
+	          background-image: url("ephp_spoofer/bg.jpg");
+	   } 
 	</style>
-	<h1>&nbsp;&nbsp; <span style="color: #ffffff;">EPHP-Spoofer By PULKIT SINGHANIA</span></h1>
-	<form action="ephp_spoofer/ephp_spoofer.php" method="post">
-		<span style="color: #ffffff;"><strong>Spoof Name</strong> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input maxlength="100" name="fromname" type="text"> &nbsp; <strong>Spoof Email</strong> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input name="fromemail" type="email"></span><br>
-		<br>
-		<span style="color: #ffffff;"><strong>Reply To Name</strong> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input maxlength="100" name="replyname" type="text"> &nbsp; <strong>Reply To Email</strong> &nbsp; &nbsp;&nbsp; <input name="replyemail" type="email"></span><br>
-		<br>
-		<hr>
-		<p><br>
-		<span style="color: #ffffff;"><strong>Recipient's&nbsp; Email&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</strong> <input name="to" size="50" type="email"></span><br>
-		<span style="color: #ffffff;"><strong>Subject&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</strong><input maxlength="100" name="subject" size="50" type="text"></span><br>
-		<br>
-		<span style="color: #ffffff;"><strong>Message (Text/HTML)</strong></span></p>
-		<p><span style="color: #ffffff;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-		<textarea cols="50" maxlength="1000000" name="message" rows="7"></textarea></span><br>
-		<br></p>
-		<hr>
-		<h1><span style="color: #ffffff;">When All Set Click "Send Spoofed Email To Send Email"</span></h1>
-	<p><span style="color: #ffffff;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input type="submit" value="Send Spoofed Email"></span></p>
-	<hr>
-	</form>
-	
-	
+	<table>
+		<tbody>
+			<tr>
+				<td style="width: 158px;">Spoof Name</td>
+				<td style="width: 186px;"><input maxlength="100" name="fromname" type="text"></td>
+			</tr>
+			<tr>
+				<td style="width: 158px;">Spoof Email Address</td>
+				<td style="width: 186px;"><input name="fromemail" type="email"></td>
+			</tr>
+			<tr>
+				<td style="width: 158px;">Reply to Name</td>
+				<td style="width: 186px;"><input maxlength="100" name="replyname" type="text"></td>
+			</tr>
+			<tr>
+				<td style="width: 158px;">Reply to Email</td>
+				<td style="width: 186px;"><input name="replyemail" type="email"></td>
+			</tr>
+			<tr>
+				<td style="width: 158px;">Recipient's Email</td>
+				<td style="width: 186px;"><input name="to" type="email"></td>
+			</tr>
+			<tr>
+				<td style="width: 158px;">Subject</td>
+				<td style="width: 186px;"><input maxlength="100" name="subject" size="50" type="text"></td>
+			</tr>
+			<tr>
+				<td style="width: 158px;">Message</td>
+				<td style="width: 186px;">
+				<textarea cols="50" maxlength="1000000" name="message" rows="7"></textarea></td>
+			</tr>
+			<tr>
+				<td rowspan="8" style="vertical-align: middle; width: 68px;"><input type="submit"></td>
+			</tr>
+		</tbody>
+	</table>
 </body>
 </html>
