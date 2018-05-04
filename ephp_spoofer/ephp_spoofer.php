@@ -2,76 +2,42 @@
 
 <!doctype html>
 <html>
-<head>
-	<title>Form Mailer</title>
-</head>
 <body>
 
 	<?php
 
-	/* FETCH FROM HTML */
-	$fromName=$_POST['fromname'];
-	$fromEmail=$_POST['fromemail'];
-	$replytoName=$_POST['replytoname'];
-	$replytoEmail=$_POST['replytoemail'];
-	$toEmail=$_POST['to'];
-	$subjectText=$_POST['subject'];
-	$messageText=$_POST['message'];
-
-
-	// CREATE FULL FIELDS (NAME + EMAIL)
-	$fromFull 	=  $fromName . ' <'.$fromEmail.'> ';
-	$replytoFull 	=  $replytoName . ' <'.$replytoEmail.'> ';
-
+	/* fetching user input */
+	$fromname=$_POST['fromname'];
+	$fromemail=$_POST['fromemail'];
+	$replyname=$_POST['replyname'];
+	$replyemail=$_POST['replyemail'];
+	$email=$_POST['to'];
+	$messagebox=$_POST['message'];
+	$subjectbox=$_POST['subject'];
 	
-	/* CONFIGURE PHP IF NEEDED */
-	// ini_set("sendmail_from","$fromFull");
-	// ini_set("SMTP","mail.smtp2go.com");
-	// ini_set('smtp_port',2525);
-	// ini_set('username',"snake");
-	// ini_set('password',"cobra");
+	$from	=  $fromname . ' <'.$fromemail.'> ';
+	$replyto 	=  $replyname . ' <'.$replyemail.'> ';
 	
 
-	// COMPOSE
-	$to      = $toEmail;
-	$subject = $subjectText;
-	$message = $messageText;
+	// composing email
+	$to      = $email;
+	$subject = $subjectbox;
+	$message = $messagebox;
 
 
-	// BASIC HEADER
-	// $headers =	'From: '.$fromFull . "\r\n" .
-	//    	   		'Reply-To: '.$replytoFull . "\r\n" .
-	//    	   		'X-Mailer: PHP/' . phpversion();
-
-
-	// FULL HEADER
+	// headers
 	$headers  = "From: ".$fromFull . "\r\n";
 	$headers .= "Reply-To: ".$replytoFull . "\r\n";
-	// $headers .= "To: Mary <mary@example.com>, Kelly <kelly@example.com>" . "\r\n";
-	// $headers .= "Cc: sendacopy@here.com" . "\r\n";
-	// $headers .= "Bcc: sendablindcopy@here.com" . "\r\n";
-	// $headers .= "X-Sender: testsite < mail@testsite.com >" . "\r\n";
-	// $headers .= "Return-Path: " . $fromFull . "\r\n";
-	// $headers .= "Content-Type: text/html; charset=ISO-8859-1" . "\r\n";
+	$headers .= "Content-Type: text/html; charset=ISO-8859-1" . "\r\n";
 	$headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
 	$headers .= "X-Priority: 1" . "\r\n";
 	$headers .= "MIME-Version: 1.0" . "\r\n";
 	
 
 
-	// SEND AND SHOW MESSAGE
-	if (mail($to, $subject, $message, $headers)) echo $headers.'<h1>Mail sent!</h1>';
-	else echo '<h1>Something went wrong...</h1>';
-
-
-	// DEBUGGING MODE
-	// echo $fromFull;
-	// echo $replytoFull;
-	// echo $header;
-
-
-	// REDIRECT TO PREVIOUS PAGE AFTER SENDING
-	// header('Location: ' . $_SERVER['HTTP_REFERER']);
+	// output
+	if (mail($to, $subject, $message, $headers)) echo $headers.'<p>EPHP Successfully Spoofed your Message</p>';
+	else echo '<p>Error Sending The Email </p><a href="javascript:history.back()">Retry</a>';
 
 	?>
 
