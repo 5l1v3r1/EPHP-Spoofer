@@ -25,8 +25,8 @@
 
 
 	// headers
-	$headers  = "From: ".$fromFull . "\r\n";
-	$headers .= "Reply-To: ".$replytoFull . "\r\n";
+	$headers  = "From: ".$from . "\r\n";
+	$headers .= "Reply-To: ".$replyto . "\r\n";
 	$headers .= "Content-Type: text/html; charset=ISO-8859-1" . "\r\n";
 	$headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
 	$headers .= "X-Priority: 1" . "\r\n";
